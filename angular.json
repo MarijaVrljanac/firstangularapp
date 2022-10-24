@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "apm-new": {
+    "apm": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,14 +13,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apm-new",
+            "outputPath": "dist/apm",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/api"
             ],
             "styles": [
               "src/styles.css"
@@ -64,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "apm-new:build:production"
+              "browserTarget": "apm:build:production"
             },
             "development": {
-              "browserTarget": "apm-new:build:development"
+              "browserTarget": "apm:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "apm-new:build"
+            "browserTarget": "apm:build"
           }
         },
         "test": {
@@ -87,7 +88,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/api"
             ],
             "styles": [
               "src/styles.css"
@@ -99,6 +101,6 @@
     }
   },
   "cli": {
-    "analytics": "5d0d2400-3766-4a6c-8d50-83a397b5d5ce"
+    "analytics": "b3d9f0d9-807a-4e42-8023-9a87197da51f"
   }
-}
+ }
